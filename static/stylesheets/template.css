@@ -1,0 +1,41 @@
+body {
+    min-height: 100%;
+    background-image: url("/static/stylesheets/backgroundimage.jfif"), linear-gradient(135deg, #4e9ed1 1%, #0d0d47 100%);
+    background-blend-mode: overlay;
+    background-size: cover;
+}
+.welcome a{
+    font-family: 'Work Sans', sans-serif ;
+    font-weight: 900;
+    font-size: 3rem;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+a.effect-underline:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    height: 1em;
+    width: 100%;
+    border-bottom: 1px solid;
+    margin-top: 10px;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(0,1);
+    transform: scale(0,1);
+}
+a.effect-underline:hover:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.center {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
